@@ -32,6 +32,7 @@ img {
 html {
     font-family: "Figtree";
     height: 100%;
+    line-height: 150%;
 }
 
 body {
@@ -48,10 +49,17 @@ main {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     padding: 1.5rem;
     border-radius: 20px;
-    max-width: 317px;
+    max-width: 327px;
+    min-height: 501px;
+    border: 1px solid #111111;
+    box-shadow: 8px 8px #111111;
+    transition: max-width 0.35s ease;
+    transition: min-height 0.35s ease;
 }
 
 .image {
@@ -62,6 +70,7 @@ main {
     background-position: center;
     border-radius: 0.55rem;
     margin-bottom: 1.5rem;
+    transition: max-width 0.35s ease;
 }
 
 .card-info {
@@ -72,7 +81,8 @@ main {
 
 .label {
     max-width: 73px;
-    padding: 0.25rem 0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     font-size: 0.75rem;
     font-weight: 800;
     color: #111111;
@@ -93,8 +103,40 @@ main {
 }
 
 .main-text {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     font-weight: 500;
     color: #6b6b6b;
     line-height: 150%;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.author-avatar {
+    width: 32px;
+    height: 32px;
+}
+
+.author-name {
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.attribution {
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        max-width: 384px;
+        min-height: 522px;
+    }
+
+    .image {
+        max-width: 336px;
+    }
 }
