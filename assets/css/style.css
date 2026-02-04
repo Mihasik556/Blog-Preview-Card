@@ -32,7 +32,7 @@ img {
 html {
     font-family: "Figtree";
     height: 100%;
-    line-height: 150%;
+    line-height: 112%;
 }
 
 body {
@@ -81,9 +81,11 @@ main {
 
 .label {
     max-width: 73px;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    transition: max-width 0.35s ease;
+    transition: min-height 0.35s ease;
+    padding: 0.25rem 0.75rem;
     font-size: 0.75rem;
+    transition: font-size 0.35s ease;
     font-weight: 800;
     color: #111111;
     background-color: hsl(47, 88%, 63%);
@@ -91,15 +93,25 @@ main {
 }
 
 .publish-date {
+    max-width: fit-content;
     font-size: 0.75rem;
     font-weight: 500;
     color: #111111;
+    transition: max-width 0.35s ease;
+    transition: font-size 0.35s ease;
 }
 
 .heading {
+    line-height: 150%;
     font-size: 1.25rem;
     font-weight: 800;
     color: #111111;
+    transition: font-size 0.35s ease;
+}
+
+.heading:hover {
+    color: hsl(47, 88%, 63%);
+    cursor: pointer;
 }
 
 .main-text {
@@ -107,10 +119,12 @@ main {
     font-weight: 500;
     color: #6b6b6b;
     line-height: 150%;
+    transition: font-size 0.35s ease;
 }
 
 .author {
     display: flex;
+    width: fit-content;
     align-items: center;
     gap: 12px;
     margin-top: 24px;
@@ -122,7 +136,7 @@ main {
 }
 
 .author-name {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     font-weight: 800;
 }
 
@@ -138,5 +152,23 @@ main {
 
     .image {
         max-width: 336px;
+    }
+
+    .label {
+        max-width: 82px;
+        min-height: 29px;
+        font-size: 0.875rem;
+    }
+
+    .publish-date {
+        font-size: 0.875rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .main-text {
+        font-size: 1rem;
     }
 }
