@@ -109,7 +109,8 @@ main {
     transition: font-size 0.35s ease;
 }
 
-.heading:hover {
+.heading:hover,
+.heading:focus {
     color: hsl(47, 88%, 63%);
     cursor: pointer;
 }
